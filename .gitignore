@@ -28,6 +28,7 @@ node_modules
 
 #dist folder
 dist
+.package-lock.json
 
 #Webstorm metadata
 .idea
