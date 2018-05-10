@@ -1,0 +1,66 @@
+[33mcommit 8a7739ec9b1d2ae3f4bafdfece51bd4b382aa96e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: landrik <landrik@gmail.com>
+Date:   Thu May 10 17:34:26 2018 +0100
+
+    git cache cleared
+
+[33mcommit 0f3c88654f33f8a5ef0fb190b6b941131f4ca973[m
+Author: landrik <landrik@gmail.com>
+Date:   Thu May 10 17:08:11 2018 +0100
+
+    added components action reducers store api
+
+[33mcommit b74c57b3087441357a766081c4264971dbebf07b[m
+Author: landrik <landrik@gmail.com>
+Date:   Thu May 10 17:05:14 2018 +0100
+
+    added components action reducers store api
+
+[33mcommit b5f2ab130b556cd683cc76d0f7c4effe8e83bb45[m
+Merge: e93be39 326cd01
+Author: landrik <landrik@gmail.com>
+Date:   Thu May 10 17:02:06 2018 +0100
+
+    added components action reducers store api
+
+[33mcommit e93be39eb20cfcd1e3dd227a7d9b5c2195b5a0af[m
+Author: landrik <landrik@gmail.com>
+Date:   Thu May 10 16:58:12 2018 +0100
+
+    added components action reducers store api
+
+[33mcommit 3a5bb65f7fc73a2ec80ec79f31c710849d82ab46[m
+Author: landrik <landrik@gmail.com>
+Date:   Thu May 10 16:55:05 2018 +0100
+
+    added components action reducers store api
+
+[33mcommit 326cd013eee1184f4202ecf63b609cd5244a913c[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Landry Karege <landrik@users.noreply.github.com>
+Date:   Wed May 9 18:11:54 2018 +0100
+
+    Delete package-lock.json
+
+[33mcommit 49b296319bbc02f2e2bebf45649bab47b498d7c0[m
+Author: landrik <landrik@gmail.com>
+Date:   Wed May 9 18:10:32 2018 +0100
+
+    updated folder
+
+[33mcommit ab47e01c2c932e854e3403f80582fe9c4670ea83[m
+Author: landrik <landrik@gmail.com>
+Date:   Wed May 9 18:08:35 2018 +0100
+
+    updated folder
+
+[33mcommit 807c4751959ad607d9357c5ccd7f79baecf1beb7[m
+Author: landrik <landrik@gmail.com>
+Date:   Wed May 9 18:06:20 2018 +0100
+
+    updated folder
+
+[33mcommit ac542a34997cda9bd658f22ddba535bf95d3d16e[m
+Author: landrik <landrik@gmail.com>
+Date:   Wed May 9 15:44:28 2018 +0100
+
+    first commit
