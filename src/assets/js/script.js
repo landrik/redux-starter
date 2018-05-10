@@ -3,9 +3,9 @@
 
 //------------------------------------- Waiting for the entire site to load ------------------------------------------------//
 
-jQuery(window).load(function() { 
-		jQuery("#loaderInner").fadeOut(); 
-		jQuery("#loader").delay(400).fadeOut("slow"); 
+jQuery(window).load(function() {
+		jQuery("#loaderInner").fadeOut();
+		jQuery("#loader").delay(400).fadeOut("slow");
 
 });
 
@@ -19,19 +19,15 @@ $(document).ready(function(){
 //--------- Scroll navigation ---------------//
 
 $("#mainNav ul a").click(function(e){
-
-	
 	var full_url = this.href;
 	var parts = full_url.split("#");
 	var trgt = parts[1];
 	var target_offset = $("#"+trgt).offset();
 	var target_top = target_offset.top;
-	
-
 
 	$('html,body').animate({scrollTop:target_top -66}, 800);
 		return false;
-	
+
 });
 
 
@@ -40,7 +36,6 @@ $("#mainNav ul a").click(function(e){
 
 	var sections = $("section");
 		var navigation_links = $("#mainNav a");
-
 		sections.waypoint({
 			handler: function(event, direction) {
 
@@ -55,8 +50,8 @@ $("#mainNav ul a").click(function(e){
 			},
 			offset: '35%'
 		});
-		
-		
+
+
 //------------------------------------- End navigation setup ------------------------------------------------//
 
 
@@ -66,33 +61,30 @@ $("#mainNav ul a").click(function(e){
 
 
 
-$('#submit').click(function(){ 
-
+$('#submit').click(function(){
 	$('input#name').removeClass("errorForm");
 	$('textarea#message').removeClass("errorForm");
 	$('input#email').removeClass("errorForm");
-	
-	var error = false; 
-	var name = $('input#name').val(); 
-	if(name == "" || name == " ") { 
-		error = true; 
+
+	var error = false;
+	var name = $('input#name').val();
+	if(name == "" || name == " ") {
+		error = true;
 		$('input#name').addClass("errorForm");
 	}
-	
-	
-		var msg = $('textarea#message').val(); 
+		var msg = $('textarea#message').val();
 		if(msg == "" || msg == " ") {
 			error = true;
 			$('textarea#message').addClass("errorForm");
-			
+
 		}
-	
-	var email_compare = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i; 
-	var email = $('input#email').val(); 
-	if (email == "" || email == " ") { 
+
+	var email_compare = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+	var email = $('input#email').val();
+	if (email == "" || email == " ") {
 		$('input#email').addClass("errorForm");
 		error = true;
-	}else if (!email_compare.test(email)) { 
+	}else if (!email_compare.test(email)) {
 		$('input#email').addClass("errorForm");
 		error = true;
 	}
@@ -101,14 +93,13 @@ $('#submit').click(function(){
 		return false;
 	}
 
-	var data_string = $('.contactForm form').serialize(); 
-	
+	var data_string = $('.contactForm form').serialize();
 
 	$.ajax({
 		type: "POST",
 		url: $('.contactForm form').attr('action'),
 		data: data_string,
-		
+
 		success: function(message) {
 				if(message == 'SENDING'){
 					$('#success').fadeIn('slow');
@@ -117,12 +108,10 @@ $('#submit').click(function(){
 					$('#error').fadeIn('slow');
 				}
 					}
-					
-					
-					
+
 	});
 
-	return false; 
+	return false;
 });
 
 
@@ -174,29 +163,29 @@ $('#mainNav li a').click(function(){
 $(".desc").css({ opacity: 0 });
 
 //--------------------------------- Hover animation for the elements of the portfolio --------------------------------//
-				
-				
-			$('.item a').hover( function(){ 
+
+
+			$('.item a').hover( function(){
 				$(this).children('.desc ').stop().animate({ opacity: 1 }, 'fast');
-			}, function(){ 
-				$(this).children('.desc ').stop().animate({ opacity: 0 }, 'slow'); 
+			}, function(){
+				$(this).children('.desc ').stop().animate({ opacity: 0 }, 'slow');
 			});
-			
+
 				$('.item').hover(function () {
 			    var projDesc = $(this).find('.projDesc');
 			    var offset = ($(this).height() / 2) - (projDesc.height() / 2);
 			    $(this).find('.desc').css('padding-top', offset + 10);
 			});
-			
-			
-				
-			
+
+
+
+
 
 //--------------------------------- End hover animation for the elements of the portfolio --------------------------------//
 
 //-----------------------------------Initilaizing fancybox for the portfolio-------------------------------------------------//
 
-	$('.folio').magnificPopup({ 
+	$('.folio').magnificPopup({
 		type: 'image',
 		fixedContentPos: false,
 		fixedBgPos: false,
@@ -209,42 +198,42 @@ $(".desc").css({ opacity: 0 });
 			duration: 300
 		}
 	});
-				
+
 //-----------------------------------End initilaizing fancybox for the portfolio-------------------------------------------------//
 
 	//--------------------------------- Sorting portfolio elements with quicksand plugin  --------------------------------//
-	
+
 		var $portfolioClone = $('.portfolio').clone();
 
 		$('.filter a').click(function(e){
-			$('.filter li').removeClass('current');	
+			$('.filter li').removeClass('current');
 			var $filterClass = $(this).parent().attr('class');
 			if ( $filterClass == 'all' ) {
 				var $filteredPortfolio = $portfolioClone.find('li');
 			} else {
 				var $filteredPortfolio = $portfolioClone.find('li[data-type~=' + $filterClass + ']');
 			}
-			$('.portfolio').quicksand( $filteredPortfolio, { 
+			$('.portfolio').quicksand( $filteredPortfolio, {
 				duration: 800,
-				easing: 'easeInOutQuad' 
+				easing: 'easeInOutQuad'
 			}, function(){
-					$('.item a').hover( function(){ 
+					$('.item a').hover( function(){
 						$(this).children('.desc ').stop().animate({ opacity: 1 }, 'fast');
-					}, function(){ 
-						$(this).children('.desc ').stop().animate({ opacity: 0 }, 'slow'); 
+					}, function(){
+						$(this).children('.desc ').stop().animate({ opacity: 0 }, 'slow');
 					});
-					
+
 						$('.item').hover(function () {
 					    var projDesc = $(this).find('.projDesc');
 					    var offset = ($(this).height() / 2) - (projDesc.height() / 2);
 					    $(this).find('.desc').css('padding-top', offset + 10);
 					});
-					
+
 
 
 //------------------------------ Reinitilaizing fancybox for the new cloned elements of the portfolio----------------------------//
 
-				$('.folio').magnificPopup({ 
+				$('.folio').magnificPopup({
 					type: 'image',
 					fixedContentPos: false,
 					fixedBgPos: false,
@@ -277,9 +266,3 @@ $(".desc").css({ opacity: 0 });
 
 
 })(jQuery);
-
-
-
-
-
-
