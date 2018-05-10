@@ -1,24 +1,12 @@
 import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import configureStore from './store/configureStore';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
-import {loadCourses} from './actions/courseActions';
-import './assets/css/base.css';
-import './assets/css/skeleton.css';
-import './assets/css/main.css';
 import './styles/styles.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-
-const store = configureStore();
-store.dispatch(loadCourses());
-
 render(
-  <Provider store={store}>
-    <Router history={browserHistory} routes={routes} />
-  </Provider>,
+  <Router history={browserHistory} routes={routes} />,
   document.getElementById('app')
 );
