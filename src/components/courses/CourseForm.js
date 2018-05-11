@@ -2,7 +2,6 @@ import React from 'react';
 import TextInput from '../common/TextInput';
 import SelectInput from '../common/SelectInput';
 
-
 const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) => {
   return (
     <form>
@@ -17,7 +16,7 @@ const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) => 
         name="authorId"
         label="Author"
         value={course.authorId}
-        defaultOption="Slect Author"
+        defaultOption="Select author"
         option={allAuthors}
         onChange={onChange}
         error={errors.authorId} />
