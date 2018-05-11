@@ -1,7 +1,6 @@
 # Logs
 logs
 *.log
-/log
 
 # Runtime data
 pids
@@ -30,9 +29,9 @@ node_modules
 #dist folder
 dist
 .package-lock.json
-elements-webarch-responsive-admin-dashboard-template-PF5JKL-2017-11-03.zip
-template
 src/assets
+template
+
 
 #Webstorm metadata
 .idea
